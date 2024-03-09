@@ -1,7 +1,7 @@
 name: document_family
 description: "A new Flutter project."
 version: 0.0.1
-homepage:
+repository: https://github.com/ssk-flutter/firestore_document_family
 
 environment:
   sdk: '>=3.3.0 <4.0.0'
