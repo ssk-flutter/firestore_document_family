@@ -1,5 +1,5 @@
 name: document_family
-description: "A new Flutter project."
+description: "delete Document include all sub collections"
 version: 0.0.1
 repository: https://github.com/ssk-flutter/firestore_document_family
 
