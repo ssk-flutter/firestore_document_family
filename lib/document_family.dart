@@ -28,11 +28,6 @@ class DocumentFamily {
       final String name = collection['collection'];
       final QuerySnapshot snapshot = await docRef.collection(name).get();
 
-      if ('log 출력을 하고 싶지 않으면 이 조건을 지우세요'.isNotEmpty) {
-        print(
-            '### docRef: ${docRef.path} collection: $name docs.length: ${snapshot.docs.length}');
-      }
-
       for (final documentSnapshot in snapshot.docs) {
         await _delete(
           documentSnapshot.reference,
