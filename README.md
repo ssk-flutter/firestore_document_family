@@ -1,15 +1,24 @@
 # document_family
 
-A new Flutter project.
+firestore 문서와 하위 collection 들을 모두 제거하는 플러그인입니다.
 
 ## Getting Started
 
-This project is a starting point for a Flutter
-[plug-in package](https://flutter.dev/developing-packages/),
-a specialized package that includes platform-specific implementation code for
-Android and/or iOS.
-
-For help getting started with Flutter development, view the
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```dart
+    final DocumentReference docRef = FirebaseFirestore.instance
+        .collection('some-collection')
+        .doc('example123');
+    final children = [
+      {'collection': 'members'},
+      {'collection': 'requestingMembers'},
+      {
+        'collection': 'tracking',
+        'children': [
+          {'collection': 'history'},
+        ],
+      },
+    ];
+    
+    await DocumentFamily(docRef, children).delete();
+```
 
