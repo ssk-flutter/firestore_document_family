@@ -1,6 +1,6 @@
 name: document_family
 description: "delete Document include all sub collections"
-version: 0.0.1
+version: 0.0.2
 repository: https://github.com/ssk-flutter/firestore_document_family
 
 environment:
